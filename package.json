@@ -1,0 +1,20 @@
+{
+  "name": "playwright-e2e-framework",
+  "version": "1.0.0",
+  "description": "Playwright E2E tests for the resume application.",
+  "scripts": {
+    "test": "npx playwright test --config=e2e.tests/playwright.config.ts",
+    "test:ui": "npx playwright test --ui --config=e2e.tests/playwright.config.ts",
+    "report": "npx playwright show-report e2e.tests/html-report"
+  },
+  "keywords": [
+    "playwright",
+    "e2e",
+    "automation",
+    "typescript"
+  ],
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.10.0"
+  }
+}
