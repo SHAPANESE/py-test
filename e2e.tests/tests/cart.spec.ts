@@ -55,7 +55,7 @@ test.describe('Shopping Cart - Item Management', () => {
   test('should show price information in cart', async ({ landingPage, cartPage }) => {
     await landingPage.addFirstItemToCart();
     await landingPage.goToCart();
-    await expect(cartPage.priceInfo).toBeVisible();
+    await expect(cartPage.priceInfo.first()).toBeVisible();
   });
 });
 
@@ -132,7 +132,7 @@ test.describe('Checkout Flow - Order Summary', () => {
     await cartPage.startCheckout();
     await cartPage.fillCheckoutInfo('Alice', 'Williams', '11111');
     await cartPage.continueCheckout();
-    await expect(cartPage.summaryElement).toBeVisible();
+    await expect(cartPage.summaryElement.first()).toBeVisible();
   });
 });
 

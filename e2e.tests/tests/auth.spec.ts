@@ -108,7 +108,7 @@ test.describe('Performance Glitch User - Login', () => {
 
   test('should load products with delay for performance_glitch_user', async ({ landingPage }) => {
     await landingPage.login('performance_glitch_user', 'secret_sauce');
-    await expect(landingPage.inventoryItems).toBeVisible({ timeout: 30000 });
+    await expect(landingPage.inventoryItems.first()).toBeVisible({ timeout: 30000 });
     const products = await landingPage.getProductCount();
     expect(products).toBeGreaterThan(0);
   });

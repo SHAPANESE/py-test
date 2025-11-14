@@ -87,7 +87,7 @@ export class CartPage {
   }
 
   async isSummaryDisplayed(): Promise<boolean> {
-    return await this.summaryElement.isVisible();
+    return await this.summaryElement.first().isVisible();
   }
 
   async isSummaryInfoDisplayed(): Promise<boolean> {
@@ -103,7 +103,7 @@ export class CartPage {
   }
 
   async isCheckoutComplete(): Promise<boolean> {
-    return await this.completeContainer.isVisible();
+    return await this.completeContainer.first().isVisible();
   }
 
   async getPageContent(): Promise<string | null> {
